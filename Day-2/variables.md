@@ -3,12 +3,19 @@
 Terraform has several types of 'variables', each designed to handle different kinds of data. Below is the full list of Terraform variable types:
 
 **String** — This fundamental type stores text values. Use strings for data that doesn’t require mathematical operations, such as usernames or tags.
+
 **Number** — This type is used for numeric values that you might need to perform calculations on or use in numeric settings, such as scaling parameters, setting timeouts, and defining a number of instances to deploy.
+
 **Bool** — Short for Boolean, this type is strictly for true or false values. They are essential for logic and conditional statements in configurations, such as enabling or disabling resource provisioning.
+
 **List** — A list is a sequence of values of the same type. This type is ideal for scenarios where you need to manage a collection of similar items, like multiple configuration tags.
+
 **Map** — Maps are collections of key-value pairs, each unique key mapping to a specific value. This type is useful, for example, when associating server names with their roles or configurations.
+
 **Tuple** — This type is similar to lists but can contain a fixed number of elements, each potentially of a different type. Tuples are suitable when you need to group a specific set of values with varied types together, like a coordinate of mixed data types.
+
 **Object** — Objects are used to define a structure with named attributes, each with its own type. They are very flexible, allowing the definition of complex relationships, like a configuration block that includes various attributes of different types.
+
 **Set** — Sets are collections of unique values of the same type. They are useful when you need to ensure no duplicates, such as a list of unique user identifiers or configurations that must remain distinct.
 
 # Terraform input variable types
@@ -190,9 +197,9 @@ variable "object_type" {
 
 A tuple is a fixed-length collection that can contain values of different data types. The key differences between tuples and lists are:
 
-    Tuples have a fixed length, as against lists.
-    With tuples, it is possible to include values with different primitive types. Meanwhile, lists dictate the type of elements included in them.
-    Values included in tuples are ordered. Due to their dynamic sizes, it is possible to resize and reorder the values in lists.
+   Tuples have a fixed length, as against lists.
+   With tuples, it is possible to include values with different primitive types. Meanwhile, lists dictate the type of elements included in them.
+   Values included in tuples are ordered. Due to their dynamic sizes, it is possible to resize and reorder the values in lists.
 
 An example of a tuple type input variable:
 
